@@ -1,18 +1,19 @@
 import Item from './Item'
-import consts from '../constants'
-import functs from '../functions/fetch-item'
+import consts, { API_CALLS, API_KEYS } from '../constants'
+import functs, {fetchItems} from '../functions/fetch-item'
 import React, { useState, useRef, useEffect } from 'react';
 
 const List = (props) => {
-    const [ItemList, getItemList] = useState([])
-
+    const [itemList, setItemList] = useState([])
+    console.log(API_CALLS.trendingMovies, API_KEYS[0])
     useEffect(()=>{
-        functs.fetchItems(consts.API_CALLS.trending+consts.API_KEY[0])
-    })
-
+        fetchItems(API_CALLS.trendingMovies, API_KEYS[0])
+        .then((json)=>setItemList(json.results))
+    }, [])
+    
     return (
         <div className="list">
-            
+            {itemList && itemList.map((item)=><Item data={item} key={item.id}/>)}
         </div>
     )
 }
