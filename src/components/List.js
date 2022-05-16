@@ -1,5 +1,5 @@
 import Item from './Item'
-import Consts from '../constants'
+import consts from '../constants'
 import functs from '../functions/fetch-item'
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -7,7 +7,7 @@ const List = (props) => {
     const [ItemList, getItemList] = useState([])
 
     useEffect(()=>{
-        functs.fetchItems(Consts.API_CALLS.trending+Consts.API_KEY[0])
+        functs.fetchItems(consts.API_CALLS.trending+consts.API_KEY[0])
     })
 
     return (
