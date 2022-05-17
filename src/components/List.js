@@ -1,7 +1,7 @@
 import Item from './Item'
-import consts, { API_CALLS, API_KEYS } from '../constants'
-import functs, {fetchItems} from '../functions/fetch-item'
-import React, { useState, useRef, useEffect } from 'react';
+import { API_CALLS, API_KEYS } from '../constants'
+import {fetchItems} from '../functions/fetch-item'
+import React, { useState, useEffect } from 'react';
 
 const List = (props) => {
     const [itemList, setItemList] = useState([])
@@ -13,7 +13,9 @@ const List = (props) => {
     
     return (
         <div className="list">
-            {itemList && itemList.map((item)=><Item data={item} key={item.id}/>)}
+            {itemList && itemList.map((item)=>
+                <Item data={item} key={item.id}/>
+            )}
         </div>
     )
 }
