@@ -9,4 +9,4 @@ function App() {
   )
 }
 
-export default App;
+export default App;//Con esto reconoce el import y la rutA
