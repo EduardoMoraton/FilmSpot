@@ -27,6 +27,7 @@ code {
 .list {
   display: flex;
   overflow: scroll;
+  gap: .5rem;
 }
 
 .item {
