@@ -28,6 +28,7 @@ const OUT_MODAL_STYLES = {
     justifyContent: "center",
 }
 
+// https://animate.style/
 
 export default function ItemInfo({open, info}){
     if(!open) return null

@@ -28,21 +28,26 @@ code {
   display: flex;
   overflow: scroll;
   gap: .5rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
 }
 
 .item {
   color: #f8f8f2;
   width: 20rem;
-  height: 40rem;
-  transition: .4s;
+  transition: .3s;
 }
 
 .item:hover img {
-  width: 22rem;
+  width: 25rem;
 }
 
 .item:hover {
-  width: 22rem;
+  width: 24rem; 
 }
 
 .item img {
@@ -52,6 +57,5 @@ code {
 }
 
 .item-info {
-
   transition: 3s;
 }
