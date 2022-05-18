@@ -14,7 +14,9 @@ const List = (props) => {
     
     return (
         <div className="list">
-            {itemList && itemList.map((item)=><Item data={item} key={item.id}/>)} 
+            {itemList && itemList.map((item)=>
+                <Item data={item} key={item.id}/>
+            )}
         </div>
     )
 }
