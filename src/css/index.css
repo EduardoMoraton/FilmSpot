@@ -1,6 +1,4 @@
 body {
-  width: 2000px;
-  min-height: 2000px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,6 +19,38 @@ code {
 }
 #root
 {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
+  background-color: #282a36;
+}
+
+.list {
+  display: flex;
+  overflow: scroll;
+}
+
+.item {
+  color: #f8f8f2;
+  width: 20rem;
+  height: 40rem;
+  transition: .4s;
+}
+
+.item:hover img {
+  width: 22rem;
+}
+
+.item:hover {
+  width: 22rem;
+}
+
+.item img {
+  object-fit: contain;
+  width: 20rem;
+  transition: .3s;
+}
+
+.item-info {
+
+  transition: 3s;
 }
