@@ -1,4 +1,3 @@
-import{ useState } from 'react';
 import React from 'react';
 import {Button,Container, Navbar,Nav,Form,FormControl,NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = () =>
 {
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="lg" variant="dark">
              <Container fluid>
                  <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
                  <Navbar.Toggle aria-controls="navbarScroll" />
