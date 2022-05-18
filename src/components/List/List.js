@@ -1,6 +1,6 @@
-import Item from './Item'
-import { API_CALLS, API_KEYS } from '../constants'
-import {fetchItems} from '../functions/fetch-item'
+import Item from '../Item/Item'
+import { API_CALLS, API_KEYS } from '../../constants'
+import {fetchItems} from '../../functions/fetch-item'
 import React, { useState, useEffect } from 'react';
 
 const List = (props) => {

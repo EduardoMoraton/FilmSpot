@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ItemInfo from './ItemInfo';
+import ItemInfo from '../ItemInfo/ItemInfo';
 import React from "react"
 
 function Item({data}) {
