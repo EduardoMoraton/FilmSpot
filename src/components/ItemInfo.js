@@ -12,14 +12,15 @@ const MODAL_STYLES = {
 
 
 export default function ItemInfo({open, data}){
+    
     if(!open) return null
-    return ReactDOM.createPortal(
+    return ReactDOM.createPortal (
         <>
         <div style={MODAL_STYLES}>
             <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
             <h1>marcos</h1>
         </div>
         </>,
-        Document.getElemetById("portal")
+        document.getElemetById("portal")
     )
 }
