@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = () =>
 {
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="lg" variant="dark">
              <Container fluid>
                  <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
                  <Navbar.Toggle aria-controls="navbarScroll" />
