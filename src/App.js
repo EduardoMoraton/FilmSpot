@@ -1,4 +1,3 @@
-import Item from './components/Item'
 import List from './components/List'
 
 function App() {
