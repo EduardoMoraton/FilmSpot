@@ -1,13 +1,17 @@
-import List from './components/List'
+import List from './components/List/List'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import {API_CALLS} from './constants'
 
 function App() {
   return (
 
     <div className="app">
       <Header />
-      <List />
+      <div className='container'>
+        <List type={API_CALLS.trendingMovies}/>
+        <List type={API_CALLS.trendingSeries}/>
+      </div>
       <Footer />
     </div>
   )

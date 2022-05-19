@@ -24,38 +24,29 @@ code {
   background-color: #282a36;
 }
 
-.list {
+.container {
   display: flex;
+  flex-direction: column;
+}
+
+.list {
+  width: 80rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
   overflow: scroll;
   gap: .5rem;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,0) 100%);
 }
 
 .list::-webkit-scrollbar {
   display: none;
 }
 
-.item {
-  color: #f8f8f2;
-  width: 20rem;
-  transition: .3s;
-}
-
-.item:hover img {
-  width: 25rem;
-}
-
-.item:hover {
-  width: 25rem; 
-}
-
-.item img {
-  object-fit: contain;
-  width: 20rem;
-  transition: .3s;
-}
-
-.item-info {
-  transition: 3s;
+.list:hover .item:not(:hover) {
+  opacity: .4;
+  filter: blur(1px);
 }

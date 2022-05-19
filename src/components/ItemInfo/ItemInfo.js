@@ -1,4 +1,4 @@
-import ReactDOM from 'react';
+import ReactDOM from 'react-dom';
 import bounceInUp from 'react-transition-group'
 
 const MODAL_STYLES = {
@@ -31,16 +31,19 @@ const OUT_MODAL_STYLES = {
 // https://animate.style/
 
 export default function ItemInfo({open, info}){
+    
+    console.log(info.title)
     if(!open) return null
-    return (
+    return (ReactDOM.createPortal(
         <>
         <div style={OUT_MODAL_STYLES} className="item-info animate__animated animate__fadeIn animate__faster">
             <div style={MODAL_STYLES} className="animate__animated animate__fadeInUp animate__faster">
                 <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
-                <h1 clasNmae="animate__animated animate__fadeInUp animate__slow">{info.title}</h1>
+                <h1 clasNmae="animate__animated animate__fadeInUp animate__slow">{info.title ?? info.name}</h1>
                 <p  clasNmae="animate__animated animate__fadeInUp animate__slower">{info.overview}</p>
             </div>
         </div>
-        </>
-    )
+        </>,
+        document.getElementById("portal")
+    ))
 }

@@ -1,0 +1,55 @@
+.item-overlay {
+    transition: .35s;
+    margin-top: 8rem;
+    height: 4rem;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    background-color: #bd93f9e7;
+}
+
+.item-overlay p{
+    width: 100%;
+}
+
+
+.item-content {
+    width: 10rem;
+    position: relative;
+    transition: .3s;
+}
+
+.item {
+    color: #f8f8f2;
+    width: 10rem;
+    transition: .5s;
+    height: 20rem;
+}
+  
+img {
+    width: 100%;
+    position: absolute;
+    object-fit: fill;
+    border-radius: 1.5rem;
+    transition: .3s;
+    border: .15rem #bd93f900 solid;
+}
+
+.item:hover {
+    width: 12rem;
+}
+
+.item:hover .item-content {
+    width: 12rem;
+}
+
+.item:hover .item-content img {
+    border-radius: 0;
+    border: .15rem #bd93f9 solid;
+}
+
+.item:hover .item-content .item-overlay {
+    opacity: 1;
+    margin-top: 10rem;
+    height: 8rem;
+}
