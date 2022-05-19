@@ -1,46 +1,24 @@
 import ReactDOM from 'react-dom';
-import bounceInUp from 'react-transition-group'
-
-const MODAL_STYLES = {
-    borderRadious: "34px",
-    top: "30%",
-    color: "FFF",
-    width: "30rem",
-    margin: "0 auto",
-    position: 'fixed',
-    backgroundColor: '#282a36',
-    zIndex: 1000,
-    padding: "1rem",
-}
-
-const OUT_MODAL_STYLES = {
-    color: "FFF",
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: 'rgba(0, 0, 0, .7)',
-    zIndex: 1000,
-    width: "100%",
-    height: "100%",
-    transition: "3s",
-    display: "flex",
-    justifyContent: "center",
-}
+import './ItemInfo.css'
+import '../RatingRadios/RatingRadio.jsx'
+import RaitingRadio from '../RatingRadios/RatingRadio.jsx';
 
 // https://animate.style/
 
 export default function ItemInfo({open, info}){
-    
-    console.log(info.title)
+    let imgSrc = "https://image.tmdb.org/t/p/w500"
     if(!open) return null
     return (ReactDOM.createPortal(
         <>
-        <div style={OUT_MODAL_STYLES} className="item-info animate__animated animate__fadeIn animate__faster">
-            <div style={MODAL_STYLES} className="animate__animated animate__fadeInUp animate__faster">
+        <div className="item-info-out animate__animated animate__fadeIn animate__faster">
+            <div className="item-info-in animate__animated animate__fadeInUp animate__faster">
                 <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
-                <h1 clasNmae="animate__animated animate__fadeInUp animate__slow">{info.title ?? info.name}</h1>
-                <p  clasNmae="animate__animated animate__fadeInUp animate__slower">{info.overview}</p>
+                <img src={imgSrc+info.poster_path}></img>
+                <div className='info-text'>
+                    <RaitingRadio rating={info.vote_average} />
+                    <h1 clasNmae="animate__animated animate__fadeInUp animate__slow">{info.title ?? info.name}</h1>
+                    <p  clasNmae="animate__animated animate__fadeInUp animate__slower">{info.overview}</p>
+                </div>
             </div>
         </div>
         </>,

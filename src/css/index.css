@@ -47,6 +47,6 @@ code {
 }
 
 .list:hover .item:not(:hover) {
-  opacity: .4;
+  opacity: .3;
   filter: blur(1px);
 }

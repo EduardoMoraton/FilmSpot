@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import RaitingRadio from "../RatingRadios/RatingRadio";
 import ItemInfo from '../ItemInfo/ItemInfo';
 import React from "react"
 import './Item.css'
@@ -10,8 +11,9 @@ function Item({data}) {
         <div onClick={()=> setIsOpen(!isOpen)} className="item">
             <div className="item-content">
                 <img src={imgSrc+data.poster_path}></img>
+                <RaitingRadio rating={data.vote_average}/>
                 <div className="item-overlay">
-                        <p>play</p>
+                        <p>Placeholder</p>
                 </div>
             </div>
             <ItemInfo open={isOpen} info={data} key={data.id}/>
