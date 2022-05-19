@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import {useState} from "react";
 import RaitingRadio from "../RatingRadios/RatingRadio";
-import ItemInfo from '../ItemInfo/ItemInfo';
+import {ItemInfo} from '../ItemInfo/ItemInfo';
 import React from "react"
 import './Item.css'
 
