@@ -1,6 +1,6 @@
 :root {
-    --rating-size: 3rem;
-    --bar-size: .3rem;
+    --rating-size: 2.5rem;
+    --bar-size: .25rem;
     --background-color: #e7f2fa;
     --rating-color-default: #2980b9;
     --rating-color-background: #c7e1f3;

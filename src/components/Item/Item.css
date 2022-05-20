@@ -53,3 +53,8 @@ img {
     margin-top: 10rem;
     height: 8rem;
 }
+
+.item:hover .item-content .rating{
+    width: 0rem;
+    height: 0rem;
+}
