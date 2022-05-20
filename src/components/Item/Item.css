@@ -1,11 +1,13 @@
 .item-overlay {
-    transition: .35s;
-    margin-top: 8rem;
-    height: 4rem;
-    position: absolute;
+    height: 5rem;
     width: 100%;
+    transition: .2s;
+    margin-top: 10rem;
+    position: absolute;
     opacity: 0;
     background-color: #bd93f9e7;
+    backdrop-filter: blur(20px);
+    border-radius: 0px 1.5rem 1.5rem 1.5rem;
 }
 
 .item-overlay p{
@@ -16,13 +18,13 @@
 .item-content {
     width: 10rem;
     position: relative;
-    transition: .3s;
+    transition: .2s;
 }
 
 .item {
     color: #f8f8f2;
     width: 10rem;
-    transition: .5s;
+    transition: .2s;
     height: 20rem;
 }
   
@@ -32,7 +34,9 @@ img {
     object-fit: fill;
     border-radius: 1.5rem;
     transition: .3s;
-    border: .15rem #bd93f900 solid;
+    border: .15rem #ffffff00 solid;
+    -webkit-box-shadow: 0px 8px 7px 1px rgba(0, 0, 0, 0.322); 
+    box-shadow: 0px 8px 7px 1px rgba(0, 0, 0, 0.356);
 }
 
 .item:hover {
@@ -44,17 +48,43 @@ img {
 }
 
 .item:hover .item-content img {
-    border-radius: 0;
+    border-radius: 0px 1.5rem 1.5rem 1.5rem;
     border: .15rem #bd93f9 solid;
 }
 
 .item:hover .item-content .item-overlay {
     opacity: 1;
-    margin-top: 10rem;
-    height: 8rem;
+    margin-top: 13rem;
 }
 
 .item:hover .item-content .rating{
     width: 0rem;
     height: 0rem;
 }
+
+.rating {
+    margin: .3rem;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.61); 
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.61);
+}
+
+
+/*BUTTON -----*/
+
+.play-btn {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  
+  .play-btn__svg{
+    transition: .2s; 
+    fill:#f8f8f2; 
+    opacity: .5;
+  }
+  
+  .play-btn:hover .play-btn__svg {
+    fill: #44475a;
+    opacity: 1;
+  }

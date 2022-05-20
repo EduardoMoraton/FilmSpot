@@ -1,12 +1,12 @@
 :root {
     --rating-size: 2.5rem;
     --bar-size: .25rem;
-    --background-color: #e7f2fa;
+    --background-color: #44475a;
     --rating-color-default: #2980b9;
     --rating-color-background: #c7e1f3;
-    --rating-color-good: #27ae60;
-    --rating-color-meh: #f1c40f;
-    --rating-color-bad: #e74c3c;
+    --rating-color-good: #50fa7b;
+    --rating-color-meh: #ffb86c;
+    --rating-color-bad: #ff5555;
   }
 
   .rating {
