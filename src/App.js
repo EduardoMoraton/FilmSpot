@@ -10,7 +10,8 @@ function App() {
     <div className="app">
       <Header />
       <div className='container'>
-        <Grid type={API_CALLS.trendingMovies}/>
+        <List type={API_CALLS.trendingSeries}/>
+        <Grid type={API_CALLS.trendingMovies}></Grid>
       </div>
       <Footer />
     </div>
