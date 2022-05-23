@@ -1,3 +1,8 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -22,6 +27,7 @@ code {
   max-width: 100vw;
   min-height: 100vh;
   background-color: #282a36;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -29,7 +35,15 @@ code {
   flex-direction: column;
 }
 
+.list-container {
+  position: relative;
+  width: 80rem;
+  height: 20rem;
+}
+
 .list {
+  position: relative;
+  scroll-behavior: smooth;
   width: 80rem;
   height: 20rem;
   display: flex;
@@ -49,4 +63,13 @@ code {
 .list:hover .item:not(:hover) {
   opacity: .3;
   filter: blur(1px);
+}
+
+.list button {
+  position: absolute;
+  z-index: 20;
+}
+
+.list button .left{
+  margin-top: 100rem;
 }
