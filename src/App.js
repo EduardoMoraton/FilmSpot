@@ -1,4 +1,5 @@
 import List from './components/List/List'
+import Grid from './components/Grid/Grid'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import {API_CALLS} from './constants'
@@ -9,8 +10,7 @@ function App() {
     <div className="app">
       <Header />
       <div className='container'>
-        <List type={API_CALLS.trendingMovies}/>
-        <List type={API_CALLS.trendingSeries}/>
+        <Grid type={API_CALLS.trendingMovies}/>
       </div>
       <Footer />
     </div>

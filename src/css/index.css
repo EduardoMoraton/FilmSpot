@@ -35,21 +35,15 @@ code {
   flex-direction: column;
 }
 
-.list-container {
-  position: relative;
-  width: 80rem;
-  height: 20rem;
-}
+
 
 .list {
-  position: relative;
   scroll-behavior: smooth;
-  width: 80rem;
-  height: 20rem;
   display: flex;
   align-items: center;
   overflow: scroll;
   gap: .5rem;
+
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
   -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 98%, rgba(0,0,0,0) 100%);
@@ -65,11 +59,22 @@ code {
   filter: blur(1px);
 }
 
-.list button {
-  position: absolute;
-  z-index: 20;
+.move-arrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
 }
 
-.list button .left{
-  margin-top: 100rem;
+.arrow {
+  color: #44475a;
+  transition: .3s;
 }
+
+.arrow:hover {
+  color: #ff79c6;
+  width: 2rem;
+}
+
+
+
