@@ -1,6 +1,6 @@
 import Item from '../Item/Item'
 import { API_CALLS, API_KEYS } from '../../constants'
-import {fetchItems} from '../../functions/fetch-item'
+import {fetchItems, createUrl} from '../../functions/fetch-item'
 import React, { useState, useEffect, useRef } from 'react';
 
 function List({type}){
@@ -11,7 +11,7 @@ function List({type}){
 
     const [itemList, setItemList] = useState([]) // Hook donde tendremos la lista de peliculas (20 items)
     useEffect(()=>{
-        fetchItems(type, API_KEYS[1])
+        fetchItems(createUrl(type, API_KEYS[1]))
         .then((json)=>setItemList(json.results)) // Aqui rellenamos la lista de peliculas desde el fetch 
     }, [])
 

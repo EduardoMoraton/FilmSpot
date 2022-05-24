@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button,Container, Navbar,Nav,Form,FormControl,NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Header = () =>
+const Header = ({childToParent}) =>
 {
+    function handleSearch(event) {
+        console.log(event);
+        childToParent("home")
+        childToParent(event.target.value)
+       
+    }
     return (
         <Navbar bg="dark" expand="lg" variant="dark">
             <Container fluid>
@@ -16,9 +22,9 @@ const Header = () =>
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                 >
-                    <Nav.Link href="#Home">Home</Nav.Link>
-                    <Nav.Link href="#Peliculas">Peliculas</Nav.Link>
-                    <Nav.Link href="#Series" >
+                    <Nav.Link href="#Home" onClick={()=>childToParent("home")}>Home</Nav.Link>
+                    <Nav.Link href="#Peliculas" onClick={()=>childToParent("movies")}>Peliculas</Nav.Link>
+                    <Nav.Link href="#Series" onClick={()=>childToParent("tv")}>
                     Series
                     </Nav.Link>
                 </Nav>
@@ -28,6 +34,7 @@ const Header = () =>
                     placeholder="Buscar"
                     className="me-2"
                     aria-label="Search"
+                    onChange={handleSearch}
                     />
                     <Button variant="outline-success">Buscar</Button>
                 </Form>

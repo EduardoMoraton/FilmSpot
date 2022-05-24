@@ -10,7 +10,7 @@ function Item({data}) {
     return (
         <div onClick={()=> setIsOpen(!isOpen)} className="item">
             <div className="item-content">
-                <img src={imgSrc+data.poster_path}></img>
+                <img src={imgSrc+data.poster_path ?? '../../../public/noImage.png'}></img>
                 <RaitingRadio rating={data.vote_average}/>
                 <div className="item-overlay">
                     <div class="play-btn">
