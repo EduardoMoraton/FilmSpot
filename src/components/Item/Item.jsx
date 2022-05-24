@@ -1,14 +1,23 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import RaitingRadio from "../RatingRadios/RatingRadio";
 import {ItemInfo} from '../ItemInfo/ItemInfo';
 import React from "react"
 import './Item.css'
 
-function Item({data}) {
+function Item({data, delay}) {
     const [isOpen, setIsOpen] = useState(false)
+    const [isShown, setIsShown] = useState(false)
+
+    useEffect(() => {
+        console.log(delay);
+        setTimeout(() => {
+          setIsShown(true);
+        }, delay);
+      },[delay]);
+    
     let imgSrc = "https://image.tmdb.org/t/p/w500"
-    return (
-        <div onClick={()=> setIsOpen(!isOpen)} className="item">
+    return isShown ? (
+        <div onClick={()=> setIsOpen(!isOpen)} className="item animate__animated animate__backInRight animate__faster">
             <div className="item-content">
                 <img src={imgSrc+data.poster_path ?? '../../../public/noImage.png'}></img>
                 <RaitingRadio rating={data.vote_average}/>
@@ -26,7 +35,7 @@ function Item({data}) {
             </div>
             <ItemInfo open={isOpen} info={data} key={data.id}/>
         </div>
-    )
+    ) : null
 }
 
 export default Item;

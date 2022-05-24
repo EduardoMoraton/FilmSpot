@@ -49,8 +49,8 @@ function List({type}){
                 </div>
             <div className='list-body'>
                 <div className="list" ref={listRef}>
-                    {itemList && itemList.map((item)=>
-                        <Item data={item} key={item.id}/>
+                    {itemList && itemList.map((item, i)=>
+                        <Item data={item} delay={i*20}key={item.id}/>
                     )}
                 </div>
             </div>

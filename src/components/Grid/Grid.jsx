@@ -20,8 +20,8 @@ function Grid({type, search}){
         <div className='grid-container'>
             <div className='grid-body'>
                 <div className="grid">
-                    {itemList && itemList.map((item)=>
-                        <Item data={item} key={item.id}/>
+                    {itemList && itemList.map((item, i)=>
+                        <Item data={item} delay={i*20}key={item.id}/>
                     )}
                 </div>
             </div>

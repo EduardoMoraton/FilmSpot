@@ -10,7 +10,7 @@ export function ItemInfo({open, info}){
     if(!open) return null
     return (ReactDOM.createPortal(
         <div className="item-info-out animate__animated animate__fadeIn animate__faster">
-            <div className="item-info-in animate__animated animate__fadeInUp animate__faster">
+            <div className="item-info-in animate__animated animate__backInDown animate__faster">
                 <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
                 <img src={imgSrc+info.poster_path}></img>
                 <div className='info-text'>
