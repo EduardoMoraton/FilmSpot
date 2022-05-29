@@ -1,5 +1,6 @@
 .item-info-in {
-    min-height: 20rem;
+    min-height: 40rem;
+    overflow: scroll;
     border-radius: 34px;
     top: 5%;
     color: white;
@@ -38,3 +39,6 @@
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 1%,rgb(27, 27, 27) 2%,rgb(255, 255, 255) 10%,rgba(242, 242, 242, 0.212) 28%,rgba(242,242,242,0) 100%);
 }
 
+.rating {
+    
+}

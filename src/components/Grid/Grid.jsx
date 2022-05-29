@@ -9,7 +9,7 @@ function Grid({type, search}){
     const [itemList, setItemList] = useState([]) // Hook donde tendremos la lista de peliculas (20 items)
     useEffect(()=>{
         if(search != undefined)
-        fetchItems(createSearchUrl(API_KEYS[0], search))
+        fetchItems(createSearchUrl(API_KEYS[0], search)+ "&page=1")
         .then((json)=>setItemList(json.results))
         else
         fetchItems(createUrl(type, API_KEYS[0], search))

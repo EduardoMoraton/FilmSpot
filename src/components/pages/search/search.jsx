@@ -6,7 +6,7 @@ function search({query}) {
   return (
 
     <div className="app">
-        <h1>TRENDING MOVIES</h1>
+        <h1>Results: </h1>
         <Grid search={query} key={query}></Grid>
     </div>
   )

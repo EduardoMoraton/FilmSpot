@@ -1,12 +1,14 @@
 import List from '../../List/List'
 import {API_CALLS} from '../../../constants'
+import Carousel from '../../Carousel/Carousel'
 
 function home() {
 
   return (
 
     <div className="app">
-        <h1>Home page</h1>
+        <Carousel></Carousel>
+        <h1>Freatured Movies</h1>
         <List type={API_CALLS.trendingMovies}></List>
     </div>
   )

@@ -11,10 +11,11 @@ export function ItemInfo({open, info}){
     return (ReactDOM.createPortal(
         <div className="item-info-out animate__animated animate__fadeIn animate__faster">
             <div className="item-info-in animate__animated animate__backInDown animate__faster">
+                .
                 <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
+                <RaitingRadio rating={info.vote_average} />
                 <img src={imgSrc+info.poster_path}></img>
                 <div className='info-text'>
-                    <RaitingRadio rating={info.vote_average} />
                     <h1 clasNmae="animate__animated animate__fadeInUp animate__slow">{info.title ?? info.name}</h1>
                     <p  clasNmae="animate__animated animate__fadeInUp animate__slower">{info.overview}</p>
                 </div>

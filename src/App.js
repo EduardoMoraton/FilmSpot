@@ -6,10 +6,10 @@ import Search from './components/pages/search/search'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import {API_CALLS} from './constants'
-import { computeHeadingLevel } from '@testing-library/react'
+import 'swiper/css';
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState()
+  const [activeMenu, setActiveMenu] = useState(<Home/>)
   const childToParent = (childdata) =>
   {
     switch (childdata) {
@@ -32,6 +32,7 @@ function App() {
 
     <div className="app">
       <Header childToParent={childToParent}/>
+      
       <div className='container'>
         {activeMenu}
       </div>

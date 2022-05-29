@@ -38,6 +38,8 @@ code {
 
 
 .list {
+  padding-left: 1rem;
+  height: 25rem;
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
@@ -54,9 +56,22 @@ code {
   display: none;
 }
 
-.list:hover .item:not(:hover) {
-  opacity: .3;
+.list:hover .item:not(:hover) img {
   filter: blur(1px);
+  opacity: .7;
+  animation: scaledown 200ms ease-in-out forwards;
+}
+
+.list:hover .item:not(:hover) .rating {
+  filter: blur(1px);
+  opacity: .7;
+  animation: scaledown 200ms ease-in-out forwards;
+}
+
+@keyframes scaledown {
+  to {
+    transform: scale(.9);
+  }
 }
 
 .move-arrows {
@@ -77,4 +92,7 @@ code {
 }
 
 
+h1 {
+  color: aliceblue;
+}
 
