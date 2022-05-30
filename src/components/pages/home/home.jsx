@@ -7,9 +7,11 @@ function home() {
   return (
 
     <div className="app">
-        <Carousel></Carousel>
+        <Carousel className="animate__animated animate__backInRight animate__faster"></Carousel>
         <h1>Freatured Movies</h1>
         <List type={API_CALLS.trendingMovies}></List>
+        <h1>Freatured Series</h1>
+        <List type={API_CALLS.trendingSeries}> </List>
     </div>
   )
 }

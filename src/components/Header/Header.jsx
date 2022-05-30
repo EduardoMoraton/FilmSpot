@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button,Container, Navbar,Nav,Form,FormControl,NavDropdown} from 'react-bootstrap';
+import './Header.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const Header = ({childToParent}) =>
@@ -21,7 +23,7 @@ const Header = ({childToParent}) =>
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                 >
-                    <Nav.Link href="#Home" onClick={()=>childToParent("home")}>Home</Nav.Link>
+                    <Nav.Link href="#Home" onClick={()=>childToParent("home")}>Inicio</Nav.Link>
                     <Nav.Link href="#Peliculas" onClick={()=>childToParent("movies")}>Peliculas</Nav.Link>
                     <Nav.Link href="#Series" onClick={()=>childToParent("tv")}>
                     Series
