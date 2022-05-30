@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = ({childToParent}) =>
 {
     function handleSearch(event) {
-        console.log(event);
         childToParent("home")
         childToParent(event.target.value)
        

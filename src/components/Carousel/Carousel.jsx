@@ -62,10 +62,7 @@ function ControlledCarousel() {
                     
             </LazyLoadImage>
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+          <h3>{itemList[rndIds[2]] != null ? itemList[rndIds[2]].title : "null"}</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

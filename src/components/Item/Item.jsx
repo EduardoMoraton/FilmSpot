@@ -12,13 +12,11 @@ function Item({data, delay}) {
     
     const PlaceHolder = () => <img src={"https://lasallealfaro.es/wp-content/uploads/2021/01/placeholder-1.png"}></img> 
     useEffect(() => {
-        console.log(delay);
         setTimeout(() => {
           setIsShown(true);
         }, delay);
       },[delay]);
     
-    console.log(data.poster_path);
     
     let imgSrc = "https://image.tmdb.org/t/p/w500"
     let imgSrcLow = "https://image.tmdb.org/t/p/w92"

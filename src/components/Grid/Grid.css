@@ -4,3 +4,22 @@
     justify-content: space-around;
     gap: 1rem;
 }
+
+.loading-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+.loading-more img {
+    width: 3rem;
+    animation: wait .5s ease-in-out;
+}
+
+@keyframes wait
+{
+    0% {
+        transform: scale(1.2);
+        background-color: #50fa7b;
+    }
+}
