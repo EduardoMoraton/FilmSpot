@@ -28,6 +28,7 @@ code {
   min-height: 100vh;
   background-color: #282a36;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .container {
