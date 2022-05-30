@@ -13,9 +13,13 @@ export function ItemInfo({open, info}){
     return (ReactDOM.createPortal(
         <div className="item-info-out animate__animated animate__fadeIn animate__faster">
             <div className="item-info-in animate__animated animate__backInDown animate__faster">
-                .
-                <div className="btn-close-modal" onClick={open=false}>CLOSE</div>
-                <RaitingRadio rating={info.vote_average} />
+                <div className="top-bar">
+                    <div className="btn-close-modal" onClick={open=false}>{`<`}</div>
+                    <div className="rating-container">
+                        <RaitingRadio rating={info.vote_average} />
+                    </div>
+                </div>
+
 
                 <LazyLoadImage 
                     src={imgSrc+info.backdrop_path}
